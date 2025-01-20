@@ -1,0 +1,21 @@
+<!-- views/notes.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>Notes</h1>
+    <ul>
+        <% notes.forEach(note => { %>
+            <li>
+                <h2><%= note.title %></h2>
+                <p><%= note.content %></p>
+                <small>Created at: <%= note.createdAt.toLocaleString() %></small>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
